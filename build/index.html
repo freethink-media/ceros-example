@@ -1,16 +1,216 @@
-<html>
 
+<!doctype html>
+<html lang="en" class="view html5-player">
 <head>
-    <title>Test file</title>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
+    <!-- BEGIN CUSTOM HEAD HTML -->
+    <!-- END CUSTOM HEAD HTML -->
+
+        <base id="cerosBase">
+
+        <script type="text/javascript">
+            (function () {
+                var locationWithNoQuery = document.location.href.split('?')[0].split('#')[0];
+                locationWithNoQuery = locationWithNoQuery.replace(/[><\(\)'"]/g,'');
+
+                if (document.location.pathname.match(/\.html$/)) {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/[^\/]*\.html$/, '');
+                } else {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/(\/p|\/page)\/[a-z0-9-]*\/?$/, '/');
+                }
+
+                document.getElementById('cerosBase').href = window.cerosBaseUrl;
+            })();
+        </script>
+
+
+        <script type="text/javascript" src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/webfont-1.6.3.js"></script>
+
+    <script type="text/javascript">
+        window.cerosContext = {
+        viewAssetsDomain    : '',
+            publicAssetsBaseUrl: 'assets/',
+            isEmbedded: top != window,
+            isVanityDomain: location.hostname !== 'view.ceros.com',
+            previewMode: false,
+            logging: {
+            emitDevWarnings : false,
+                modes: {
+                        'debug': false,
+                        'info': false,
+                        'warn': true,
+                        'error': true
+                }
+            },
+            usePageSlugsInNavigation: false,
+            usePreviewBanner: false,
+            useDocumentLoadingSpinner: true,
+            analyticsApplicationKey: 'player',
+            analyticsMaxDwellTime: 1800,
+            analyticsUrl: '',
+            apiVersion: 'v1',
+            revalidateWithCore: false,
+
+            ajaxCaching: true,
+        mediaDomainMap: null,
+            rollbarPlayerAccessKey: '61d7450b926c4268b5f89b75862f33a9',
+            deploymentName: 'prod',
+            appVersion: 'release.8.14.20.eedcc715bbad508724db7564c58669e68150da55',
+            rollbarMaxItems: 5,
+        isExported: true,
+            isStudio: false,
+
+            openGraphUrl: '',
+            accountSlug: 'freethink',
+        gracePeriodExpired  : 9007199254740991 < Date.now() / 1000,
+            appSlug: 'templates',
+            issueAliasSlug: 'hub-1-1-1-1-4',
+            issue: {"id":678341,"projectId":99481,"slug":"experience-632072859ab41","name":"06 \/ Peter Leyden's article","status":"published","creationDate":"2022-09-13T12:07:33.000Z","lastModifiedDate":"2022-09-22T12:05:54.000Z","deletionDate":null,"firstPublishedDate":"2022-09-13T21:53:23.000Z","wipExperienceVersionId":2645859,"publishedExperienceVersionId":2667252,"createdByMemberId":34564,"primaryIssueAliasId":945905,"firstPageThumbnailUrl":"\/\/media-s3-us-east-1.ceros.com\/freethink\/studio-thumbnails\/page-632621c34925c.jpg","importLinkShared":0,"lastPublishedDate":"2022-09-22T12:06:59.000Z","lastModifiedByMemberId":34564,"lastPublishedByMemberId":34564,"passwordProtected":0,"isSSOProtected":0,"auth0UserId":null,"isTemplate":0,"templateSubtitle":null,"templateThumbnailUrl":null,"htmlLanguage":"en","lastUnpublishedDate":null,"lastUnpublishedByMemberId":null,"resourceId":"63207285-cd443d2d7fe95","title":"06 \/ Peter Leyden's article"},
+            docVersion: {"id":2667252,"experienceId":678341,"slug":"experience-version-632c4fe2ce941","loadLowRes":1,"seoNoIndex":1,"googleAnalyticsId":null,"committedJsonUrl":"http:\/\/media-s3-us-east-1.ceros.com\/freethink\/doc-version-json\/v11\/experience-version-632c4fe2ce941.js","themingBackgroundImageUri":null,"seoTitleKeywords":"","seoMetaKeywords":"","seoMetaDescription":"","canonicalUrlOverride":"https:\/\/bigthink.com\/progress\/the-great-progression-peter-leyden","editorPagesManifest":[{"uri":"\/v1\/account\/freethink\/pages\/page-632c4fe2ce958","initiallyDisabled":false,"overrides":{"tablet":{"initiallyDisabled":false},"mobile":{"initiallyDisabled":false}},"thumbnail":"https:\/\/media-s3-us-east-1.ceros.com\/freethink\/page-thumbnails\/2022\/09\/22\/0a7f6b267cf8b5e9b1ddbcfb2b94d406\/page-thumbnail.jpg?imageOpt=1&crop=870,482,x0,y0"}],"cdeExportUrl":"https:\/\/ceros-media-s3-us-east-1.s3.amazonaws.com\/freethink\/issue-export\/experience-632072859ab41-09-22-2022-1206.cde","exportAppVersion":"8.11.1","creationDate":"2022-09-22T12:06:59.000Z","modificationDate":"2023-09-19T16:25:43.000Z","publishedDate":"2022-09-22T12:06:58.000Z","committedByMemberId":34564,"unsupportedBrowserRedirectUrl":"","ogTitle":"","ogDescription":"","ogImageUrl":null,"twitterTitle":"","twitterDescription":"","twitterImageUrl":null,"twitterHandle":"","lazyLoading":0,"tarExportUrl":"https:\/\/ceros-media-s3-us-east-1.s3.amazonaws.com\/freethink\/issue-export\/experience-632072859ab41-09-22-2022-1206.tar.gz","pageNamesInTitle":0,"mainContentLinkText":null,"textMode":"paragraph","zoomControlsEnabled":1,"requireUserConsentForAnalytics":0,"integrateWithCmp":0,"lineHeightCompatibility":"no_baseline_offset","playerServerSideRendering":"no_player_server_side_rendering","layoutSettings":{"layoutPrimarySetting":"viewport-width","maxTabletWidthBreakpoint":992,"maxMobileWidthBreakpoint":768,"deviceTypeMissingVariantFallback":"tablet"},"carousel":{"enabled":0,"autoTransition":0,"autoTransitionDelay":"5"},"theming":{"arrowsEnabled":1,"swipeEnabled":0,"menuEnabled":0,"backgroundColor":"#FFFFFF","menuFgColor":"#FFFFFF","menuBgColor":"#000000","backgroundImage":null}},
+            fontManifest: {"Google|IBM Plex Sans|300|italic":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":300,"fontStyle":"italic","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|300|italic","variantName":"Light italic","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|300|normal":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":300,"fontStyle":"normal","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|300|normal","variantName":"Light","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|400|italic":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":400,"fontStyle":"italic","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|400|italic","variantName":"Normal italic","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|400|normal":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|400|normal","variantName":"Normal","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|500|normal":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":500,"fontStyle":"normal","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|500|normal","variantName":"Medium","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|600|normal":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":600,"fontStyle":"normal","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|600|normal","variantName":"Semi-Bold","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|IBM Plex Sans|700|normal":{"familyName":"IBM Plex Sans","familyGuid":"Google|IBM Plex Sans","fontWeight":700,"fontStyle":"normal","unitsPerEm":1000,"ascent":780,"variantGuid":"Google|IBM Plex Sans|700|normal","variantName":"Bold","cssFamilyName":"IBM Plex Sans","api":"Google"},"Google|Roboto|400|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|400|normal","variantName":"Normal","cssFamilyName":"Roboto","api":"Google"},"Uploaded|23e357af-1d67-11ed-89a4-0ea31dcec4dd":{"familyName":"Utopia Std","familyGuid":"Uploaded|23e3327b-1d67-11ed-89a4-0ea31dcec4dd","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":728,"variantGuid":"Uploaded|23e357af-1d67-11ed-89a4-0ea31dcec4dd","variantName":"Regular","cssFamilyName":"Utopia Std-Regular-BX2CCHqA","cssFileURL":"fonts\/1a050a11-5530-49ff-b808-dd1f004282dd\/utopiastd-regular.css","api":"Uploaded","woffFileURL":null},"Uploaded|28c13aa4-1d67-11ed-89a4-0ea31dcec4dd":{"familyName":"Utopia Std","familyGuid":"Uploaded|23e3327b-1d67-11ed-89a4-0ea31dcec4dd","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":728,"variantGuid":"Uploaded|28c13aa4-1d67-11ed-89a4-0ea31dcec4dd","variantName":"Italic","cssFamilyName":"Utopia Std-Italic-SuXkHmjx","cssFileURL":"fonts\/d0935adc-4872-43a4-bbf8-6755314255b4\/utopiastd-italic.css","api":"Uploaded","woffFileURL":null},"Uploaded|642eec6d-1dfb-11ed-89a4-0ea31dcec4dd":{"familyName":"Libre Baskerville","familyGuid":"Uploaded|642eb932-1dfb-11ed-89a4-0ea31dcec4dd","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":800,"variantGuid":"Uploaded|642eec6d-1dfb-11ed-89a4-0ea31dcec4dd","variantName":"Italic","cssFamilyName":"Libre Baskerville-Ital-JSrfGS2h","cssFileURL":"fonts\/6dfa7736-859c-4a01-871b-3de1194dcb76\/librebaskerville-italic.css","api":"Uploaded","woffFileURL":null},"Uploaded|893bcd17-1d64-11ed-89a4-0ea31dcec4dd":{"familyName":"Reckless Neue","familyGuid":"Uploaded|7419c556-1d64-11ed-89a4-0ea31dcec4dd","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":800,"variantGuid":"Uploaded|893bcd17-1d64-11ed-89a4-0ea31dcec4dd","variantName":"Regular","cssFamilyName":"Reckless Neue-Regular-NrvBwvWJ","cssFileURL":"fonts\/8e1a2290-e7c7-434a-aaec-e3143c5fbfab\/recklessneue-regular.css","api":"Uploaded","woffFileURL":null}},
+        whiteLabeling   : true,
+        isTrialAccount      : false,
+        allowCommerceIntegration  : false,
+        allowEmbeddedPlayerSdk    : true,
+        allowAdaptiveLayouts: true,
+            commerceSettings: {
+            panelWidth      : null,
+            panelHeight     : null,
+                productUrl: '',
+                shoppingCartUrl: '',
+            },
+                themeObj: {
+                arrowsEnabled    : true,
+                swipeEnabled     : false,
+                menuEnabled      : false,
+                    menuFgColor: '#FFFFFF',
+                    menuBgColor: '#000000',
+                    menuHoverOpacity: 0.6,
+                    backgroundColor: '#FFFFFF',
+                backgroundImage  :
+                        null
+
+                },
+            googleFontUrl: '',
+            featureFlags: {"Password Protected Experiences":false,"Getty Image Integration":false,"Getty Video Integration":false,"Accessibility":false,"(BETA) Protected Preview":false,"Cookie Compliance":true,"Position Interactions":true,"Editor":true,"New Text Tool":true,"Studio API":false,"SSO Protected Experiences":false,"Studio Redesign":true,"(New Text Tool) List And Bullets":false,"(New Text Tool) Subscript And Superscript":false,"(New Text Tool) Html Element":true,"(New Text Tool) Object States":false,"(New Text Tool) Spellcheck":false,"Editor for Creators":false,"Remove window.eval":true,"Editor Image Crop And Resize":true,"Editor Debug Mode":false,"Improved Team Management":true,"(New Text Tool) Columns":true,"Gemma":false,"Open in MarkUp":true,"Create Account from Login":true,"Individual Accounts":true,"AI Templates":true,"New Text Tool Experience Converter (requires New Text Tool)":true,"Studio Lite":true,"Intercom Support Chat":true,"Editor Sign Up":true,"Beamer":true,"Showcase Experience":false,"Component Library":true,"SDR Editor Invite":false,"Force Protected Experiences":false,"Request Feedback":false,"Editor Free For Import":true,"Home Screen":true,"Seismic Integration":false,"Gemma in Admin":false,"New Selection Behavior":false,"AI Features":false,"Experience Sharing":true,"Show Import Design Files":true,"Player Server Side Rendering":false,"Floating Toolbar":false,"Getty Library Integration":false,"Use Embed Modal":false,"Onboarding":false,"Use Modern IpadOS Scrolling":true},
+            analyticsTrackers: {
+                cerosPlayerTracker: {enabled: true },
+                googleAnalyticsTracker: {"enabled":false},
+                googleTagManagerTracker: {"enabled":false},
+                marketoTracker: {enabled: false, accountId: '' },
+                eloquaTracker: {enabled: false, siteId: '', cookieDomain: ''},
+                universalAnalyticsTracker: {enabled: false }
+            },
+
+        
+            useOptimizedJs: true,
+        };
+    </script>
+
+    <!--
+      DISPLAY SETTINGS
+    -->
+        <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="monitor-signature" content="monitor:player:html5"/>
+
+    <title>06 &#x2F; Peter Leyden&#39;s article</title>
+
+
+
+        <meta name="robots" content="noindex, nofollow"/>
+
+    <meta property="og:title" content="06 &#x2F; Peter Leyden&#39;s article"/>
+        <meta property="og:image" content="media/0a7f6b267cf8b5e9b1ddbcfb2b94d406/page-thumbnail.jpg"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="06 &#x2F; Peter Leyden&#39;s article">
+    <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="media/0a7f6b267cf8b5e9b1ddbcfb2b94d406/page-thumbnail.jpg">
+
+    <script language="Javascript" id="docversion-request-script">
+        window.docVersionRequest = window.jQuery.ajax({
+            url           : "media/experience-version-632c4fe2ce941.js",
+            dataType      : 'jsonp',
+            jsonp         : false, 
+            cache         : true,  
+            jsonpCallback : "loadDocVersion_v1_account_freethink_document_versions_experience_version_632c4fe2ce941",
+            success       : window.jQuery.noop 
+        });
+    </script>
+
+    <!--
+      FONTS
+    -->
+
+    
+
+
+
+    <script type="text/javascript">
+        window.cerosPlayerLoadStart = new Date();
+    </script>
+
+    <!--
+        Although the player itself no longer uses requirejs, users can still use requirejs with
+        the SDK. Therefore, we need to continue including it here... for now...
+    -->
+    <script
+        type="text/javascript"
+        crossorigin="anonymous"
+        src="assets/player/shared/libs/require/require-min.b03b66057d7df9b2cc9aa9c4c18aa569.js">
+    </script>
+
+    <script
+            type="text/javascript"
+            async
+            crossorigin="anonymous"
+            charset="UTF-8"
+            src="assets/player/applications/html5-player/bootstrap-optimized.84d930cc267d2066708c39770f4d752c.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/player/applications/html5-player/css/html5-player.164d02c86dd08df49058bf5a3da67137.css"/>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        body:-ms-fullscreen::-ms-backdrop {
+            background-color: #FFFFFF;
+        }
+    </style>
+
+</head>
 <body>
 
-    <h1>Test file</h1>
-    <p>This is a test file.</p>
 
-    <img src="/img/test.jpg" alt="Test image" />
 
+
+    <noscript>
+        
+    </noscript>
+
+
+<div id="main"></div>
+<div id="backgroundContainer"></div>
+
+
+    <!-- BEGIN CUSTOM HTML -->
+    
+    <!-- END CUSTOM HTML -->
+
+
+
+    <div id="page-transition-aria-live" class="sr-only" aria-live="assertive"></div>
 </body>
-
 </html>
